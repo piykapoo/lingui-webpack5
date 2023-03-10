@@ -17,7 +17,7 @@ const App = () => {
       <ThemeProvider theme={{ color: 'blue' }}>
         <I18nProvider i18n={i18n}>
           <div className='App'>
-            <Text>Testing</Text>
+            <Text>Lingui Webpack5 Context Issue</Text>
           </div>
         </I18nProvider>
       </ThemeProvider>
