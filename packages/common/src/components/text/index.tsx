@@ -11,10 +11,5 @@ export const Text = ({ children }) => {
   console.log(theme, 'theme');
   console.log(envConfig, 'envConfig');
   console.log(i18n, 'i18n');
-  return (
-    <div>
-      {children}
-      {/* {JSON.stringify(theme)} */}
-    </div>
-  );
+  return <div>{children}</div>;
 };
