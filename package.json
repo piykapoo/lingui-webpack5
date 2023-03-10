@@ -1,0 +1,22 @@
+{
+  "name": "@sample/root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private":"true",
+  "workspaces":[
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"yarn workspaces run build",
+    "extract": "yarn workspaces run lingui extract",
+    "compile": "yarn workspaces run lingui compile",
+    "start": "yarn workspace @sample/app start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+  }
+}

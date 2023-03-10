@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": true, /* Generates corresponding '.d.ts' file. */
+        "sourceMap": true, /* Generates corresponding '.map' file. */
+        "strict": true,
+        "noImplicitAny": false, /* Raise error on expressions and declarations with an implied 'any' type. */
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true, /* Enables experimental support for ES7 decorators. */
+        "emitDecoratorMetadata": true, /* Enables experimental support for emitting type metadata for decorators. */
+        "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "jsx": "preserve",
+         "baseUrl": ".",
+         "outDir": "./dist",
+           "paths": {
+          "~/*": ["src/*"]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "definitions",
+        "packages/*/node_modules",
+        "packages/*/definitions",
+        "packages/*/lib",
+        "node_modules/*",
+        "dist",
+        "lib",
+        "**/*.spec.ts"
+    ]
+}
