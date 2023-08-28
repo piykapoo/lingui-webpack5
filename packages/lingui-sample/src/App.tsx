@@ -1,5 +1,6 @@
 import './App.css';
-import { Text, EnvProvider } from '@sample/common';
+import { t, Trans } from '@lingui/macro';
+import { Text, EnvProvider,LangProvider } from '@sample/common';
 import { I18nProvider } from '@lingui/react';
 import { i18n } from '@lingui/core';
 import { useEffect } from 'react';
@@ -16,9 +17,12 @@ const App = () => {
     <EnvProvider envConfig={{ environment: 'development' }}>
       <ThemeProvider theme={{ color: 'blue' }}>
         <I18nProvider i18n={i18n}>
+        <LangProvider i18n={i18n}>
           <div className='App'>
+            <Trans>My test</Trans>
             <Text>Lingui Webpack5 Context Issue</Text>
           </div>
+          </LangProvider>
         </I18nProvider>
       </ThemeProvider>
     </EnvProvider>

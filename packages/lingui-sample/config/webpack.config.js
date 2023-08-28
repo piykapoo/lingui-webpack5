@@ -300,6 +300,12 @@ module.exports = function (webpackEnv) {
       modules: ['node_modules', paths.appNodeModules].concat(
         modules.additionalModulePaths || []
       ),
+      fallback: {
+        "fs": false,
+        "path": false,
+        "os": false
+     },
+      extensions: ['.jsx', '.js', '.tsx', '.ts'],
       // These are the reasonable defaults supported by the Node ecosystem.
       // We also include JSX as a common component filename extension to support
       // some tools, although we do not recommend using it, see:
@@ -339,6 +345,7 @@ module.exports = function (webpackEnv) {
     module: {
       strictExportPresence: true,
       rules: [
+        {test: /\.ts$/, exclude: /node_modules/, loader: 'ts-loader'},
         // Handle node_modules packages that contain sourcemaps
         shouldUseSourceMap && {
           enforce: 'pre',
