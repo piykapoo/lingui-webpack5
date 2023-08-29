@@ -1,5 +1,5 @@
 import './App.css';
-import { t, Trans } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 import { Text, EnvProvider,LangProvider } from '@sample/common';
 import { I18nProvider } from '@lingui/react';
 import { i18n } from '@lingui/core';

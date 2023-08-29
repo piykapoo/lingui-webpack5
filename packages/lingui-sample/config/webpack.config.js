@@ -303,9 +303,12 @@ module.exports = function (webpackEnv) {
       fallback: {
         "fs": false,
         "path": false,
-        "os": false
-     },
-      extensions: ['.jsx', '.js', '.tsx', '.ts'],
+        "os": false,
+        "url": false,
+        "util": false, 
+        "module": false,        
+     },   
+     extensions: ['.js', '.jsx', '.ts', '.tsx'],
       // These are the reasonable defaults supported by the Node ecosystem.
       // We also include JSX as a common component filename extension to support
       // some tools, although we do not recommend using it, see:
@@ -569,6 +572,9 @@ module.exports = function (webpackEnv) {
         },
       ].filter(Boolean),
     },
+    externals: {
+      'ts-node':"ts-node"
+    },    
     plugins: [
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
