@@ -25,7 +25,12 @@ module.exports = {
         include: /node_modules/,
         exclude: /@babel(?:\/|\\{1,2})runtime/,
         type: 'javascript/auto'
-      }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ]
   },
   externals: [
